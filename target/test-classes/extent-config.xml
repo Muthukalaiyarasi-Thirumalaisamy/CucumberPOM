@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <!-- Report theme: dark or standard -->
+        <theme>dark</theme>
+        
+        <!-- Document encoding -->
+        <encoding>UTF-8</encoding>
+
+        <!-- Protocol for scripts/stylesheets -->
+        <protocol>http</protocol>
+
+        <!-- Title of the document -->
+        <documentTitle>Extent Report</documentTitle>
+
+        <!-- Report name displayed in top navigation -->
+        <reportName>Test Automation Report</reportName>
+
+        <!-- Location of charts in the test view -->
+        <testViewChartLocation>bottom</testViewChartLocation>
+
+        <!-- Custom JavaScript -->
+        <scripts>
+            <![CDATA[
+            $(document).ready(function() {
+                // Any custom JS can go here
+            });
+            ]]>
+        </scripts>
+
+        <!-- Custom CSS styles -->
+        <styles>
+            <![CDATA[
+            /* Custom CSS can be added here */
+            ]]>
+        </styles>
+
+        <!-- System Information section -->
+        <systemInfo>
+            <item name="Role">Test Engineer</item>
+            <item name="Team">Simplification TWO POT/QA </item>
+        </systemInfo>
+    </configuration>
+</extentreports>
