@@ -19,7 +19,6 @@ import io.cucumber.junit.CucumberOptions;
 )
 public class TestRunner {
 
-
     @AfterClass
     public static void tearDownAll() {
         // Flush Extent Reports after all tests
