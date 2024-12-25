@@ -87,6 +87,32 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.3.0</version>
 		</dependency>
+		
+<dependency>
+    <groupId>net.serenity-bdd</groupId>
+    <artifactId>serenity-core</artifactId>
+    <version>4.2.9</version>
+</dependency>
+
+<dependency>
+    <groupId>net.serenity-bdd</groupId>
+    <artifactId>serenity-junit</artifactId>
+    <version>4.2.9</version>
+</dependency>
+
+<dependency>
+    <groupId>net.serenity-bdd</groupId>
+    <artifactId>serenity-ensure</artifactId>
+    <version>4.2.9</version>
+    <scope>test</scope>
+</dependency>
+
+<dependency>
+    <groupId>net.serenity-bdd</groupId>
+    <artifactId>serenity-cucumber6</artifactId>
+    <version>2.6.0</version>
+</dependency>
+
 
 	</dependencies>
 
@@ -116,7 +142,41 @@
 				</configuration>
 			</plugin>
 			
+<!-- Serenity Maven Plugin -->
+        <plugin>
+            <groupId>io.serenity-bdd</groupId>
+            <artifactId>serenity-maven-plugin</artifactId>
+            <version>3.9.0</version>
+            <executions>
+                <execution>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>aggregate</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
 
+        <!-- Maven Failsafe Plugin for integration testing -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <version>3.0.0</version>
+            <configuration>
+                <includes>
+                    <include>**/*IT.java</include>
+                </includes>
+            </configuration>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>integration-test</goal>
+                        <goal>verify</goal>
+                    </goals>
+                </execution>
+            </executions>
+        </plugin>
+    
 		</plugins>
 	</build>
 </project>

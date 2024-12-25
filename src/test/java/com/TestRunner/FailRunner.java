@@ -9,21 +9,21 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/Features",
+        features = "@target/rerunfailedtest.txt",
         glue = {"stepDefinition", "AppHooks"},
         plugin = {
                 "pretty",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
                 "html:target/cucumber-report.html",
                 "rerun:target/rerunfailedtest.txt"
-
         }
 )
-public class TestRunner {
+public class FailRunner {
 
     @AfterClass
     public static void tearDownAll() {
         // Flush Extent Reports after all tests
         ApplicationHooks.flushReports();
     }
+
 }

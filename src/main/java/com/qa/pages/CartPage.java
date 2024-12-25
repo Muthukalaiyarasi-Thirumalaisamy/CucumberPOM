@@ -11,7 +11,6 @@ public class CartPage {
 
 	private WebDriver driver;
     private By TitleXpath = By.xpath("//span[text()='Your Cart']");
-    //private By CartQuantity = By.xpath("//div[@class='cart_quantity']");
     private By ContinueShopping = By.id("continue-shopping");
     private By checkout = By.id("checkout");
     private By CartProductName = By.cssSelector(".inventory_item_name");
