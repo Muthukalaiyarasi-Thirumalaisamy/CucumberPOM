@@ -1,4 +1,7 @@
+stepDefinition\ProductsPageStepDefinition.class
 AppHooks\ApplicationHooks.class
 com\TestRunner\TestRunner.class
 stepDefinition\LoginPageStepDefinition.class
-stepDefinition\ProductsPageStepDefinition.class
+com\TestRunner\FailRunner.class
+stepDefinition\CartPageStepDefinition.class
+parallel\ParallelRun.class

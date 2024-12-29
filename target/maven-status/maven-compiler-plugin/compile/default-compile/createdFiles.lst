@@ -1,6 +1,5 @@
 com\qa\pages\LoginPage.class
 com\qa\factory\DriverFactory.class
+com\qa\pages\CartPage.class
 com\qa\util\ConfigReader.class
-com\qa\util\ElementUtil.class
-com\qa\util\Constants.class
 com\qa\pages\ProductsPage.class
