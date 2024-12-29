@@ -101,7 +101,7 @@
 					<target>${java.version}</target>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.version}</version>
@@ -113,10 +113,10 @@
 					<threadCount>4</threadCount>
 					<useUnlimitedThreads>true</useUnlimitedThreads>
 				</configuration>
-			</plugin>
+			</plugin>-->
 		
         <!-- Maven Failsafe Plugin for integration testing -->
-        <plugin>
+       <!-- <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-failsafe-plugin</artifactId>
             <version>3.0.0</version>
@@ -133,7 +133,7 @@
                     </goals>
                 </execution>
             </executions>
-        </plugin>
+        </plugin>-->
     
 		</plugins>
 	</build>
