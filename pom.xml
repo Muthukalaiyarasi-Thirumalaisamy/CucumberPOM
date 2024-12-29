@@ -14,11 +14,10 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<java.version>1.8</java.version>
-		<!--<junit.version>4.13.2</junit.version>-->
+		<java.version>21</java.version>
+		<junit.version>4.13.2</junit.version>
 		<cucumber.version>7.20.1</cucumber.version>
 		<maven.compiler.version>3.8.1</maven.compiler.version>
-		<maven.surefire.version>2.22.2</maven.surefire.version>
 
 	</properties>
 
@@ -29,13 +28,6 @@
 			<version>${cucumber.version}</version>
 			<scope>test</scope>
 		</dependency>
-		
-<dependency>
-    <groupId>org.junit.jupiter</groupId>
-    <artifactId>junit-jupiter-engine</artifactId>
-    <version>5.11.4</version>
-    <scope>test</scope>
-</dependency>
 
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -44,12 +36,12 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!--<dependency>
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
 			<scope>test</scope>
-		</dependency>-->
+		</dependency>
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
@@ -69,12 +61,12 @@
 			<version>1.14.0</version>
 		</dependency>
 
-		<dependency>
+		<!--<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
 			<version>7.10.2</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency>-->
 
 		<!--<dependency>
 			<groupId>io.cucumber</groupId>
@@ -94,27 +86,21 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.3.0</version>
 		</dependency>
-		
-		<dependency>
-        <groupId>org.junit.jupiter</groupId>
-        <artifactId>junit-jupiter-api</artifactId>
-        <version>5.11.4</version>
-        <scope>test</scope>
-    </dependency>
-    
-    <dependency>
-    <groupId>org.slf4j</groupId>
-    <artifactId>slf4j-api</artifactId>
-    <version>1.7.30</version>
-</dependency>
-<dependency>
-    <groupId>org.slf4j</groupId>
-    <artifactId>slf4j-simple</artifactId>
-    <version>1.7.30</version>
-    <scope>test</scope>
-</dependency>
 
-    
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.30</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.30</version>
+			<scope>test</scope>
+		</dependency>
+
+
 	</dependencies>
 
 	<build>
@@ -129,7 +115,19 @@
 					<target>${java.version}</target>
 				</configuration>
 			</plugin>
+
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.2</version> 
+				<configuration>
+					<includes>
+						<include>**/testRunner.java</include>
+					</includes>
+				</configuration>
+			</plugin>
+
+			<!--<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${maven.surefire.version}</version>
@@ -141,10 +139,10 @@
 					<threadCount>4</threadCount>
 					<useUnlimitedThreads>true</useUnlimitedThreads>
 				</configuration>
-			</plugin>
-		
-        <!-- Maven Failsafe Plugin for integration testing -->
-       <!-- <plugin>
+			</plugin>-->
+
+			<!-- Maven Failsafe Plugin for integration testing -->
+			<!-- <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-failsafe-plugin</artifactId>
             <version>3.0.0</version>
@@ -162,7 +160,7 @@
                 </execution>
             </executions>
         </plugin>-->
-    
+
 		</plugins>
 	</build>
 </project>

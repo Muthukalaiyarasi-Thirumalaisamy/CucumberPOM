@@ -1,9 +1,9 @@
-package com.TestRunner;
+package TestRunner;
 
-import org.junit.AfterClass;
+
 import org.junit.runner.RunWith;
 
-import AppHooks.ApplicationHooks;
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
@@ -19,11 +19,7 @@ import io.cucumber.junit.CucumberOptions;
 
         }
 )
-public class TestRunner {
+public class testRunner {
 
-    @AfterClass
-    public static void tearDownAll() {
-        // Flush Extent Reports after all tests
-        ApplicationHooks.flushReports();
-    }
+   
 }

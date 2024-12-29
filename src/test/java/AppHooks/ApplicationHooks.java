@@ -88,10 +88,5 @@ public class ApplicationHooks {
         driver.quit();
     }
 
-    // Static method to flush the report at the end of test execution
-    public static void flushReports() {
-        if (extent != null) {
-            extent.flush();
-        }
-    }
+        
 }
